@@ -15,13 +15,13 @@ public class CarTester {
 
   @Test
   public void constructor_whenCreated_shouldBeTurnedOff() {
-    assertFalse(mCar.isTurnedOn());
+    assertFalse(mCar.ismIsTurnedOn());
   }
 
   @Test
   public void turnOn_whenOff_shouldPass() {
     mCar.turnOn();
-    assertTrue(mCar.isTurnedOn());
+    assertTrue(mCar.ismIsTurnedOn());
   }
 
   @Test(expected = IllegalStateException.class)
@@ -32,7 +32,7 @@ public class CarTester {
 
   @Test(expected = IllegalStateException.class)
   public void turnOff_whenOff_shouldThrow() {
-    assertFalse(mCar.isTurnedOn());
+    assertFalse(mCar.ismIsTurnedOn());
     mCar.turnOff();
   }
 
@@ -40,7 +40,7 @@ public class CarTester {
   public void turnOff_whenOn_shouldPass() {
     mCar.turnOn();
     mCar.turnOff();
-    assertFalse(mCar.isTurnedOn());
+    assertFalse(mCar.ismIsTurnedOn());
   }
 
   @Test(expected = UnsupportedOperationException.class)

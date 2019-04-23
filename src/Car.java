@@ -1,27 +1,27 @@
 public class Car {
 
-  private boolean isTurnedOn;
+  private boolean mIsTurnedOn;
 
   public Car() {
-    isTurnedOn = false;
+    mIsTurnedOn = false;
   }
 
   public void turnOn() {
-    if (isTurnedOn) {
+    if (mIsTurnedOn) {
       throw new IllegalStateException("Cannot turn a car that is already on");
     }
-    isTurnedOn = true;
+    mIsTurnedOn = true;
   }
 
-  public boolean isTurnedOn() {
-    return isTurnedOn;
+  public boolean ismIsTurnedOn() {
+    return mIsTurnedOn;
   }
 
   public void turnOff() {
-    if (!isTurnedOn) {
+    if (!mIsTurnedOn) {
       throw new IllegalStateException("Cannot turn off a car that is already off");
     }
-    isTurnedOn = false;
+    mIsTurnedOn = false;
   }
 
   public void fly() {
